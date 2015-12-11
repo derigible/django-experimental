@@ -1,0 +1,139 @@
+﻿html, body {
+    height: 100%;
+}
+
+.background {
+    background-image: url("/static/img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background-black {
+    background-color: black;
+}
+
+.wrapper-body {
+    height: 100%;
+}
+
+.wrapper {
+    border-style: none;
+}
+
+.center.background {
+    height: 100%;
+    display: table;
+    width: 100%;
+}
+
+.project-view {
+    height: 100%;
+    display: table;
+    width: 100%;
+}
+
+.middle-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.button-wrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.yellow-button {
+    background-color: yellow;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+#entry-button {
+    margin-top: 15em;
+    margin-left: 4.6em;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    background-color: rgba(148, 148, 148, 0.7);
+    height: 100%;
+    width: 100%
+}
+
+.close-button {
+    margin: 2em;
+    font-size: x-large;
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+/********************************************
+	Project Card CSS
+********************************************/
+.project {
+    position: relative;
+    float: left;
+    width: 11em;
+    height: 11.4em;
+    box-sizing: border-box;
+    margin-right: .5314em;
+	margin-left: .5314em;
+	margin-bottom: 1em;
+    border: rgb(215, 206, 206);
+    border-style: solid;
+    border-width: 1px;
+    background: rgba(181, 169, 169, 0.95);
+}
+
+
+.middle-row .center{
+    padding-left: 9em;
+}
+         
+.project h3 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: -.27em;
+    padding-left: .2em;
+    padding-right: .2em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 8em;
+    overflow-x: hidden;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+         
+.project span {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+         
+.project select {
+    margin-bottom: .4em;
+    width: 11em;
+}
+
+.project.info_container {
+    width: 11em;
+	float: none;
+	border: none;
+	top: -.5em;
+	padding: .3em;
+	margin: auto;
+	text-align: center;
+	height: 0;
+}
+         
+.project.info_container span {
+	text-align: center;
+}
+
+.project input[type="button"]{
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
