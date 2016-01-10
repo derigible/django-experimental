@@ -294,10 +294,10 @@ ctrls.controller('AssignerCtrl', ['$scope', '$routeParams', '$cacheFactory', 'Wo
 		$scope.submitChanges = function () {
 		    var add = [];
 		    var remove = [];
-		    for (let i of to_add.values()) {
+		    for (var i of to_add.values()) {
 		        add.push(i);
 		    }
-		    for (let i of to_remove.values()) {
+		    for (var i of to_remove.values()) {
 		        remove.push(i);
 		    }
 		    wc.student_assigned_assignment($rp, { "add": add, "remove": remove }, function (data) {

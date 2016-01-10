@@ -3,9 +3,37 @@
 }
 
 .background {
-    background-image: url("/static/img/background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+        background-image: url("/static/img/jolley_big.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+@media (min-aspect-ratio: 1640/944) {
+   .background {
+        background-image: url("/static/img/jolley_big.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+}
+
+@media (max-width: 1350px) {
+   .background {
+        background-image: url("/static/img/jolley_half.jpg");
+    }
+}
+
+@media (max-width: 1250px) {
+   .background {
+        background-image: url("/static/img/jolley_third.jpg");
+    }
+}
+
+@media (max-width: 750px) {
+   .background {
+        background-image: url("/static/img/jolley_small.jpg");
+    }
 }
 
 .background-black {
@@ -18,6 +46,7 @@
 
 .wrapper {
     border-style: none;
+    max-width: initial;
 }
 
 .center.background {
@@ -49,8 +78,34 @@
     font-style: italic;
 }
 
+.slogan {
+    margin-left: 15%;
+}
+
+.quote {
+    width: 25em;
+    margin-left: -2.8em;
+}
+
+.quote p{
+    color: white;
+    margin-bottom: .3em;
+    font-size: 2.3em;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 1350px) {
+   .quote {
+        background-color: rgba(148, 148, 148, .7);
+        -webkit-border-radius: 15px 15px 15px 15px;
+        border-radius: 15px 15px 15px 15px;
+        padding: .1em;
+    }
+}
+
 #entry-button {
-    margin-top: 15em;
+    margin-top: 4em;
     margin-left: 4.6em;
 }
 
@@ -68,6 +123,8 @@
     font-family: sans-serif;
     color: white;
     cursor: pointer;
+    position: fixed;
+    right: 1px;
 }
 
 /********************************************
@@ -76,8 +133,8 @@
 .project {
     position: relative;
     float: left;
-    width: 11em;
-    height: 11.4em;
+    width: 15em;
+    height: 16em;
     box-sizing: border-box;
     margin-right: .5314em;
 	margin-left: .5314em;
@@ -90,7 +147,13 @@
 
 
 .middle-row .center{
-    padding-left: 9em;
+    float: left;
+    width: 100%;
+}
+
+.card-slots{
+    margin: auto;
+    width: 48.2em;
 }
          
 .project h3 {
@@ -106,6 +169,13 @@
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@media (max-width: 775px) {
+   .card-slots{
+        margin-left: 20%;
+        width: 10em;
+    }
+}
          
 .project span {
     width: 100%;
@@ -119,14 +189,15 @@
 }
 
 .project.info_container {
-    width: 11em;
+    width: 10em;
 	float: none;
 	border: none;
 	top: -.5em;
-	padding: .3em;
+    margin-top: 2.6em;
 	margin: auto;
 	text-align: center;
 	height: 0;
+    background-color: initial;
 }
          
 .project.info_container span {
@@ -134,6 +205,6 @@
 }
 
 .project input[type="button"]{
-    margin-top: 2em;
-    margin-left: 1.2em;
+    margin-top: 4.8em;
+    margin-left: .9em;
 }

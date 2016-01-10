@@ -5,65 +5,81 @@
         <meta charset="utf-8" />
         <title>Jolley Arts</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href='/css/reset.css' rel='stylesheet' media='screen'>
-	    <link href='/css/generics.css' rel='stylesheet' media='screen'>
-        <link href='/css/jolley.css' rel='stylesheet' media='screen'>
+        <link href='css/reset.css' rel='stylesheet' media='screen'>
+	    <link href='css/generics.css' rel='stylesheet' media='screen'>
+        <link href='css/jolley.css' rel='stylesheet' media='screen'>
     </head>
     <body ng-controller="MasterCtrl" class="background-black">
         <div style="height: 100%;" ng-controller="WelcomeCtrl">
             <div class="wrapper wrapper-body">
                 <div class="center background">
                     <div class="button-wrapper" ng-show="!overlay">
-                        <input id="entry-button" 
-                               type="button" 
-                               class="yellow-button button" 
-                               value="See Work"
-                               ng-click="overlay = !overlay"
-                               />
+                        <div class="slogan">
+                            <div class="quote">
+                                <p>
+                                    "Art is a gift to be
+                                </p>
+                                <p>
+                                    shared -- so share it."
+                                </p>
+                                <br/>
+                                <p>
+                                    -- Jordan Jolley
+                                </p>
+                            </div>
+                            <input id="entry-button" 
+                                   type="button" 
+                                   class="yellow-button button" 
+                                   value="See Work"
+                                   ng-click="overlay = !overlay"
+                                   />
+                        </div>
                     </div>
                 </div>
 	        </div><!-- #wrapper.container -->
             <div class="overlay" ng-show="overlay">
-                <div class="fright close-button" ng-click="overlay = !overlay">
+                <div class="close-button" ng-click="overlay = !overlay">
                     X
                 </div>
                 <div class="wrapper wrapper-body">
                     <div class="project-view">
                         <div class="middle-row">
                             <div class="center">
-                                <div class="project" ng-repeat="project in data.projects | orderObjectsBy:'name' | filter:{name : searchText}:filter_by_startswith">
-				                    <div style="height:100%;" 
-					                    ng-class="{'admin_box' : canDelete}">
-					                    <div ng-if="canDelete" class="delete_entity">
-						                    <a href="#" ng-click="deleteProject(project)">X</a>
-					                    </div>
-	                                    <a ng-href="#/list/workloads/{{project.id}}" ng-click="getRuns(project);">
-	                	                    <h3 title="{{project.name}}">{{project.name}}</h3>
-	                                    </a>
-	                                    <div class="project info_container">
-						                    <input type="button" 
-                                                   class="yellow-button button" 
-                                                   value="See Project"
-                                                   />
-	                                    </div>
-            	                    </div>
-           	                    </div>
+                                <div class="card-slots">
+                                    <div class="project" ng-repeat="project in data.projects | orderObjectsBy:'name' | filter:{name : searchText}:filter_by_startswith">
+				                        <div style="height:100%;" 
+					                        ng-class="{'admin_box' : canDelete}">
+					                        <div ng-if="canDelete" class="delete_entity">
+						                        <a href="#" ng-click="deleteProject(project)">X</a>
+					                        </div>
+	                                        <a ng-href="#/list/workloads/{{project.id}}" ng-click="getRuns(project);">
+	                	                        <h3 title="{{project.name}}">{{project.name}}</h3>
+	                                        </a>
+	                                        <div class="project info_container">
+						                        <input type="button" 
+                                                       class="yellow-button button" 
+                                                       value="See Project"
+                                                       />
+	                                        </div>
+            	                        </div>
+           	                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="/js/angular.min.js"></script>
-        <script src="/js/angular-route.min.js"></script>
-	    <script src="/js/angular-resource.min.js"></script>
-	    <script src="/js/angular-cookies.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+	    <script src="js/angular-resource.min.js"></script>
+	    <script src="js/angular-cookies.min.js"></script>
 
-        <script src="/js/jolley/app.js"></script>
-        <script src="/js/jolley/controllers.js"></script>
-        <script src="/js/jolley/services.js"></script> 
-		<script src="/js/jolley/filters.js"></script> 
-		<script src="/js/jolley/directives.js"></script> 
+        <script src="js/jolley/app.js"></script>
+        <script src="js/jolley/controllers.js"></script>
+        <script src="js/jolley/services.js"></script> 
+		<script src="js/jolley/filters.js"></script> 
+		<script src="js/jolley/directives.js"></script> 
 
     </body>
 </html>
